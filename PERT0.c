@@ -9,13 +9,13 @@
 
 char inputf(char *fp)
 {
-    setlocale(LC_ALL, "Portuguese");
+	setlocale(LC_ALL, "Portuguese");
     textcolor(3);
-    printf("                        Digite o nome do arquivo com a extenss%co .exe: ",0xc6);
+    printf("                        Digite o nome do arquivo com a extensão .exe: ");
     fgets(fp,33,stdin);
     printf("\n");
 	
-    int count = 0;
+	int count = 0;
     for(count;fp[count];count++)
     {
         if(fp[count] =='\n')
@@ -25,8 +25,8 @@ char inputf(char *fp)
 }
 
 int main() {
-    setlocale(LC_ALL, "Portuguese");
-    while(1){
+	setlocale(LC_ALL, "Portuguese");
+	while(1){
     textcolor(2);
     printf("\t\t\t**************************************************************\n");
     printf("\t\t\t************************* PERT0 2.0 **************************\n");
@@ -42,8 +42,8 @@ int main() {
     }
 
     petest_init(fp);
-    dos_header(fp);
-    coff(fp);
+	dos_header(fp);
+	coff(fp);
 	
     textcolor(2);
     printf("\n****************************************************************************************************************\n");
