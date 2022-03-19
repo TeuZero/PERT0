@@ -3,13 +3,13 @@
 // OPEN FILE
 FILE *opf(char *pe)
 {   
-    setlocale(LC_ALL, "Portuguese");
+	setlocale(LC_ALL, "Portuguese");
     textcolor(6);
     FILE *pee = fopen(pe,"r");
     if(!pee)
     {
         textcolor(4);
-        printf("\t\t\t\tN%co foi poss%cvel abrir arquivo.",0xc6,0x8d);
+        printf("\t\t\t\tNão foi possível abrir arquivo.");
         getchar();
         system("cls");
         fflush(stdin);
