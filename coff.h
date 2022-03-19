@@ -7,7 +7,7 @@ char coff (char *fp)
 {  
     
     printf("\n         ***************************************************************************************\n");
-	printf("                                        COFF - Common Object File Format");
+    printf("                                        COFF - Common Object File Format");
     printf("\n         ***************************************************************************************\n");
     
     // Abre o arquivo
