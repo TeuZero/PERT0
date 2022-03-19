@@ -5,6 +5,7 @@
 #include "opf.h"
 #include "dos_header.h"
 #include "coff.h"
+#include "optional.h"
 
 
 char inputf(char *fp)
@@ -44,6 +45,7 @@ int main() {
     petest_init(fp);
 	dos_header(fp);
 	coff(fp);
+	optional(fp);
 	
     textcolor(2);
     printf("\n****************************************************************************************************************\n");
@@ -51,7 +53,7 @@ int main() {
     getchar();
     system("cls");
     fflush(stdin);
-    
+	    
     }
 }
 
