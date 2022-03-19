@@ -3,7 +3,7 @@ IMAGE_NT_HEADERS32* inh;
 	
 petest_init(char* file){
 	
-	FILE* f = fopen(file, "rb");
+    FILE* f = fopen(file, "rb");
     if (!f)
         return 1;
 
