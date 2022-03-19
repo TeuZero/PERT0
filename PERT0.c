@@ -1,10 +1,11 @@
-#include <iostream>
 #include <windows.h>
+#include <Stdio.h>
 #include <locale.h>
 #include "petest.h"
 #include "opf.h"
 #include "dos_header.h"
 #include "coff.h"
+
 
 char inputf(char *fp)
 {
@@ -13,8 +14,9 @@ char inputf(char *fp)
     printf("                        Digite o nome do arquivo com a extenss%co .exe: ",0xc6);
     fgets(fp,33,stdin);
     printf("\n");
-
-    for(int count = 0;fp[count];count++)
+	
+	int count = 0;
+    for(count;fp[count];count++)
     {
         if(fp[count] =='\n')
             fp[count]=0;
@@ -52,3 +54,5 @@ int main() {
     
     }
 }
+
+	
