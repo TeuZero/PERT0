@@ -3,7 +3,7 @@
 // OPEN FILE
 FILE *opf(char *pe)
 {   
-	setlocale(LC_ALL, "Portuguese");
+    setlocale(LC_ALL, "Portuguese");
     textcolor(6);
     FILE *pee = fopen(pe,"r");
     if(!pee)
