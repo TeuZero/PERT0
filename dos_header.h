@@ -17,7 +17,7 @@ char dos_header(char *fp)
 		else
 			printf("         [-] Arquivo não é um PE\n\n");
 	
-    printf("         Magic number:                  0x%X       \n",idh->e_magic);
+    	printf("         Magic number:                  0x%X       \n",idh->e_magic);
 	printf("         Bytes in last page:            0x%X       \n",idh->e_cblp);
 	printf("     	 Pages in file:                 0x%X       \n",idh->e_cp);	
 	printf("     	 Relocations:                   0x%X       \n",idh->e_crlc);	
