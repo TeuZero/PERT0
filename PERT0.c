@@ -7,7 +7,6 @@
 #include "coff.h"
 #include "optional.h"
 
-
 char inputf(char *fp)
 {
     setlocale(LC_ALL, "Portuguese");
@@ -16,7 +15,7 @@ char inputf(char *fp)
     fgets(fp,33,stdin);
     printf("\n");
 	
-	int count = 0;
+    int count = 0;
     for(count;fp[count];count++)
     {
         if(fp[count] =='\n')
@@ -46,14 +45,13 @@ int main() {
 	    dos_header(fp);
 	    coff(fp);
 	    optional(fp);
-
+	    
 	    textcolor(2);
 	    printf("\n****************************************************************************************************************\n");
 	    textcolor(7);
 	    getchar();
 	    system("cls");
 	    fflush(stdin);
-
     }
 }
 
