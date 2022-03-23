@@ -1,6 +1,5 @@
 #include <windows.h>
 #include <iostream>
-#include <locale.h>
 #include "textcolor.h"
 
 int main(int argc, char* argv[]) {
