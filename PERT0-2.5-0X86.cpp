@@ -5,7 +5,6 @@
 
 int main(int argc, char* argv[]) {
     
-
 	char *fileName = new char;
 	
 	memcpy(fileName,argv[1], 33);
