@@ -10,13 +10,12 @@ typedef unsigned __int64 QWORD, *PQWORD;
 void logo(LPVOID p);
 
 int main(int argc, char** argv) {
-    setlocale(LC_ALL, "Portuguese");
-    
-	logo(NULL);
+    setlocale(LC_ALL, "Portuguese");   
+    logo(NULL);
 	
-	PIMAGE_THUNK_DATA thunkData = {0};
-	DWORD thunk = 0;
-	DWORD rawOffset = 0;
+    PIMAGE_THUNK_DATA thunkData = {0};
+    DWORD thunk = 0;
+    DWORD rawOffset = 0;
 	
     //IMAGE DO ARQUIVO
     //================================================================================          
@@ -28,15 +27,14 @@ int main(int argc, char** argv) {
     ids = (IMAGE_SECTION_HEADER*)malloc(sizeof(IMAGE_SECTION_HEADER));
     
     IMAGE_SECTION_HEADER *sectionHeader;
-	IMAGE_SECTION_HEADER *importSection;
-	sectionHeader = (IMAGE_SECTION_HEADER*)malloc(sizeof(IMAGE_SECTION_HEADER));
-	importSection = (IMAGE_SECTION_HEADER*)malloc(sizeof(IMAGE_SECTION_HEADER));
+    IMAGE_SECTION_HEADER *importSection;
+    sectionHeader = (IMAGE_SECTION_HEADER*)malloc(sizeof(IMAGE_SECTION_HEADER));
+    importSection = (IMAGE_SECTION_HEADER*)malloc(sizeof(IMAGE_SECTION_HEADER));
 	
-	IMAGE_IMPORT_DESCRIPTOR* importDescriptor;
-	importDescriptor = (IMAGE_IMPORT_DESCRIPTOR*)malloc(sizeof(IMAGE_IMPORT_DESCRIPTOR));
+     IMAGE_IMPORT_DESCRIPTOR* importDescriptor;
+     importDescriptor = (IMAGE_IMPORT_DESCRIPTOR*)malloc(sizeof(IMAGE_IMPORT_DESCRIPTOR));
     //================================================================================
-    
-	
+    	
     /*
     *
     *   Abri o arquivo, le todos os bytes dele e grava na variavel buffer.
