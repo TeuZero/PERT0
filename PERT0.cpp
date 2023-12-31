@@ -37,7 +37,7 @@ int main(int argc, char** argv) {
     //================================================================================
     
 	
-	/*
+    /*
     *
     *   Abri o arquivo, le todos os bytes dele e grava na variavel buffer.
     *   
@@ -56,7 +56,7 @@ int main(int argc, char** argv) {
     is.close(); // fecha arquivo 
 
     
-	/*
+   /*
     *
     *   Copia bytes de IMAGE no arquivo para as estruturas IMAGE.
     *   
@@ -163,24 +163,18 @@ int main(int argc, char** argv) {
 		std::cout << "\t\t0x" << ids->Characteristics << "\tCharacteristics" << std::endl;
 		
 		DWORD terminateS = ids->PointerToRawData + ids->SizeOfRawData;
-    	DWORD bytesLivre = ids->SizeOfRawData - ids->Misc.VirtualSize;
-    	std::cout  << "\t\tEssa secao termina em "<< "\t\t0x" << terminateS << std::endl;
-    	std::cout  << "\t\tEssa tem  "<< std::dec << bytesLivre << "\t\tBytes livre no seu final"<< std::endl;
-    	
+	    	DWORD bytesLivre = ids->SizeOfRawData - ids->Misc.VirtualSize;
+	    	std::cout  << "\t\tEssa secao termina em "<< "\t\t0x" << terminateS << std::endl;
+	    	std::cout  << "\t\tEssa tem  "<< std::dec << bytesLivre << "\t\tBytes livre no seu final"<< std::endl;
+	    	
 
 		// save section that contains import directory table
 		if (importDirectoryRVA >= sectionHeader->VirtualAddress && importDirectoryRVA < sectionHeader->VirtualAddress + sectionHeader->Misc.VirtualSize) {
 			importSection = sectionHeader;
-		}
-		
+		}		
 	}
 	
-
-	
-
-	
 	/* TEST
-	
 	// get file offset to import table
 	rawOffset = (DWORD)fileData + importSection->PointerToRawData;
 
@@ -206,18 +200,15 @@ int main(int argc, char** argv) {
 		}
 	} */
     
- 
     textcolor(2);
-	std::cout << "\n****************************************************************************************************************\n";
-	textcolor(7);
+    std::cout << "\n****************************************************************************************************************\n";
+    textcolor(7);
     
     free(mz);
     free(inh);
     free(ids);
     return 0;
 }
-
-
 
 void logo(LPVOID p){
 	textcolor(2);
@@ -226,5 +217,5 @@ void logo(LPVOID p){
 	std::cout << "\t\t\t********** Portable Executable Read - by: Teuzero ************\n";
 	std::cout << "\t\t\t**************************************************************\n\n";
 	std::cout << "****************************************************************************************************************\n";
-    textcolor(6);
+        textcolor(6);
 }
